@@ -638,9 +638,22 @@
 <script>
   // Cursor
   const cur = document.getElementById('cur'), ring = document.getElementById('ring');
+  
   document.addEventListener('mousemove', e => {
     cur.style.left = e.clientX + 'px'; cur.style.top = e.clientY + 'px';
     setTimeout(() => { ring.style.left = e.clientX + 'px'; ring.style.top = e.clientY + 'px'; }, 60);
+  
+    // Détecte si on survole une zone noire
+    const el = document.elementFromPoint(e.clientX, e.clientY);
+    const onDark = el && el.closest('#skills-wrap, #skills, nav, .ct-box, .pj.feat, footer');
+  
+    if (onDark) {
+      cur.style.background = '#ff4d8f';   // rose vif sur fond noir
+      ring.style.borderColor = '#ffffff'; // cercle blanc
+    } else {
+      cur.style.background = '';
+      ring.style.borderColor = '';
+    }
   });
 
   // Reveal on scroll
