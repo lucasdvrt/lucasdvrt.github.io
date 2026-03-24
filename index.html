@@ -604,9 +604,9 @@
             <span class="cl-ic">✉️</span>
             <div><span class="cl-lbl">Email</span><span class="cl-val">lucasdevancourt@gmail.com</span></div>
           </a>
-          <a href="https://linkedin.com/in/lucasdevancourt" target="_blank" class="cl">
+          <a href="https://www.linkedin.com/in/lucas-devancourt/" target="_blank" class="cl">
             <span class="cl-ic">🔗</span>
-            <div><span class="cl-lbl">LinkedIn</span><span class="cl-val">linkedin.com/in/lucasdevancourt</span></div>
+            <div><span class="cl-lbl">LinkedIn</span><span class="cl-val">linkedin.com/in/lucas-devancourt</span></div>
           </a>
           <a href="https://github.com/lucasdvrt" target="_blank" class="cl">
             <span class="cl-ic">🐙</span>
@@ -614,10 +614,19 @@
           </a>
         </div>
       </div>
-      <form class="cf" action="https://formspree.io/f/mqegzeby" method="POST">
-        <div class="fg"><label>Nom</label><input type="text" placeholder="Votre nom" /></div>
-        <div class="fg"><label>Email</label><input type="email" placeholder="votre@email.com" /></div>
-        <div class="fg"><label>Message</label><textarea placeholder="Votre message..."></textarea></div>
+      <form class="cf" action="https://formspree.io/f/TON_ID_ICI" method="POST">
+        <div class="fg">
+          <label>Nom</label>
+          <input type="text" name="nom" placeholder="Votre nom" required />
+        </div>
+        <div class="fg">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="votre@email.com" required />
+        </div>
+        <div class="fg">
+          <label>Message</label>
+          <textarea name="message" placeholder="Votre message..." required></textarea>
+        </div>
         <button type="submit" class="btn-lime">Envoyer →</button>
       </form>
     </div>
